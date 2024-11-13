@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>vaidyah</title>
+        <link rel="icon" type="image/x-icon" href="images/logo v.png">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <label class="navbar">VaidyaH</label>
+                <div id="clock"></div>
+                <script type="text/javascript">
+                    setInterval(displayclock, 500)
+                    function displayclock () {
+                        var time = new Date();
+                        var hrs = time.getHours();
+                        var min = time.getMinutes();
+                        var sec = time.getSeconds();
+                        var en = 'AM';
+
+                        if (hrs > 12) {
+                            en = 'PM';
+                        }
+
+                        if (hrs > 12) {
+                            hrs = hrs - 12;
+                        }
+
+                        if (hrs == 0) {
+                            hrs =hrs - 12;
+                        }
+                        if (hrs < 10) {
+                            hrs = '0' + hrs;
+                        }
+                        if (min < 10) {
+                            min = '0' + min;
+                        }
+                        if (sec < 10) {
+                            sec = '0' + sec;
+                        }
+
+
+
+                        document.getElementById('clock').innerHTML = hrs + ':' + min +':' + sec + ' ' + en;
+                    }
+                </script>
+                <ul>
+                    <li><a href="login.php">sign in</a></li>
+                    <li><a href="register.php">sign up</a></li>
+                    <li><a href="#">external login</a>
+                    <ul class="dropdown">
+                        <li><a href="#">hospital</a></li>
+                        <li><a href="#">clinic</a></li>
+                        <li><a href="#">doctor</a></li>
+                        <li><a href="#">distributer</a></li>
+                        <li><a href="#">chemist</a></li>
+                        <li><a href="#">external</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main">
+                <div class="logo">
+                    <img src="images/logo v.png">
+                </div>
+                <ul2>
+                    <li2><a href="#">home</a></li2>
+                    <li2><a href="#">department</a></li2>
+                    <li2><a href="#">services</a></li2>
+                    <li2><a href="#">aboutus</a></li2>
+                </ul2>
+            </div>
+        </header>
+
+        
+
+
+
+
+    </body>
+</html>
